@@ -1,0 +1,145 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiragana Quiz</title>
+
+
+
+    <link rel="stylesheet" href="{% static 'styled.css' %}">
+    <link rel="icon" href="{% static 'favicon.ico' %}">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+</head>
+
+<body>
+    {% csrf_token %} {% load static %}
+    <nav>
+        <header>
+            <div class="header-container">
+                <a href="home" id="logo">
+                    <h2 class="k">KANTAN NA NIHONGO</h2>
+                    <a> {% if user.is_authenticated %}
+                        
+                    <a class="active" href="logout">
+                        <h3 class="k1">LOGOUT</h3>
+                    </a>
+
+                    <a class="active" href="result">
+                        <h3 class="k1">RESULT</h3>
+                    </a>
+                    <a class="active" href="#">
+                        <h3 class="k1">WELCOME,{{user.username}}</h3>
+                    </a>
+            </div>
+            </div>
+            </a>
+            {% else %}
+            <a class="active" href="/register">
+                <h3 class="k1">REGISTER</h3>
+            </a>
+            <a class="active" href="/login">
+                <h3 class="k1">LOGIN</h3>
+            </a>
+            {% endif %}
+            </a>
+            </div>
+        </header>
+        <div>
+
+
+            <ul id="mainul">
+
+                <li><a href="/home">HOME</a></li>
+                <li><a href="/phrases">PHRASES</a></li>
+                <li><a href="/hiragana">HIRAGANA</a></li>
+                <li><a href="/katakana">KATAKANA</a></li>
+                <li><a href="/kanji">KANJI</a></li>
+                <li><a href="/examdetails">EXAM DETAILS</a></li>
+                <li><a href="/resources">RESOURCES</a></li>
+                <li><a href="/translation">TRANSLATION</a></li>
+                <li><a href="/aboutus">ABOUT US</a></li>
+                <li><a href="/flashcard">FLASHCARD</a></li>
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn">MORE</button>
+                        <div class="dropdown-content">
+                            <a href="/chatbotst">TRANSCRIPTION</a>
+                            <a href="/chatbot">ROBOT_FRIEND</a>
+                            <a href="/chatbotts">TEXT_AUDIO</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+    </nav>
+    </div>
+
+    <h2 class="examsh1">{{h.title}}</h2>
+
+    <div class="divclass">
+        <form style="font-size: large;" method="post" action="/submitanswer/{{h.id}}/{{q1.id}}">
+            {% csrf_token %} {% load static %}
+            <p>{{q1.question}}</p>
+            <p><input type="radio" id="opt_1" name="answer" value="{{q1.opt1}}">
+                <label for="opt_1">{{q1.opt1}}</label><br>
+                <input type="radio" id="opt_2" name="answer" value="{{q1.opt2}}">
+                <label for="opt_2">{{q1.opt2}}</label><br>
+                <input type="radio" id="opt_3" name="answer" value="{{q1.opt3}}">
+                <label for="opt_3">{{q1.opt3}}</label><br>
+                <input type="radio" id="opt_4" name="answer" value="{{q1.opt4}}">
+                <label for="opt_4">{{q1.opt4}}</label><br>
+            </p>
+            <br>
+
+            <p> <input type="submit" name="submit" value="Submit" class="submitBtn">
+                <input type="button" name="skip" value="skip">
+            </p>
+        </form>
+
+    </div>
+    <script>
+        $(document).ready(function() {
+            $(".submitBtn").on('click', function() {
+                var _checkedAns = $("input[name='answer']:checked").val();
+                if (_checkedAns == undefined) {
+                    alert('please select option!');
+                    return false;
+                }
+
+            });
+        });
+    </script>
+
+
+
+    <div>
+        <footer>
+            <div class="row2"></div>
+            <div class="footer-container">
+                <h3>FOLLOW US ON</h3>
+                <ul>
+                    <a href="Instagram.html">Instagram</a> &nbsp;&nbsp;
+                    <a href="Facebook.html">Facebook</a> &nbsp;&nbsp;
+                    <a href="YouTube.html">YouTube</a> &nbsp;&nbsp;
+                </ul>
+            </div>
+            <div class="footer-container">
+                <img src="{% static 'favicon.ico' %}" alt="icon" id="fav">
+                <h3>KANTAN NA NIHONGO &nbsp;&copy;&nbsp;All Rights Reserved</h3>
+                <a href="termsndcond">Terms & Conditions</a>
+            </div>
+    </div>
+    </footer>
+    </div>
+
+
+</body>
+
+
+</html>

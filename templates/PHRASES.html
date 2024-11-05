@@ -1,0 +1,258 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHRASES</title>
+
+
+
+    <link rel="stylesheet" href="{% static 'styled.css' %}">
+    <link rel="icon" href="{% static 'favicon.ico' %}">
+
+
+</head>
+
+
+<body>
+    {% csrf_token %} {% load static %}
+    <nav>
+        <header>
+            <div class="header-container">
+                <a href="home" id="logo">
+                    <h2 class="k">KANTAN NA NIHONGO</h2>
+                    <a> {% if user.is_authenticated %}
+                        
+                    <a class="active" href="logout">
+                        <h3 class="k1">LOGOUT</h3>
+                    </a>
+
+                    <a class="active" href="result">
+                        <h3 class="k1">RESULT</h3>
+                    </a>
+                    <a class="active" href="#">
+                        <h3 class="k1">WELCOME,{{user.username}}</h3>
+                    </a>
+            </div>
+            </div>
+            </a>
+            {% else %}
+            <a class="active" href="register">
+                <h3 class="k1">REGISTER</h3>
+            </a>
+            <a class="active" href="login">
+                <h3 class="k1">LOGIN</h3>
+            </a>
+            {% endif %}
+            </a>
+            </div>
+        </header>
+        <div>
+
+            <ul id="mainul">
+
+                <li><a href="home">HOME</a></li>
+                <li><a href="phrases">PHRASES</a></li>
+                <li><a href="hiragana">HIRAGANA</a></li>
+                <li><a href="katakana">KATAKANA</a></li>
+                <li><a href="kanji">KANJI</a></li>
+                <li><a href="examdetails">EXAM DETAILS</a></li>
+                <li><a href="resources">RESOURCES</a></li>
+                <li><a href="translation">TRANSLATION</a></li>
+                <li><a href="aboutus">ABOUT US</a></li>
+                <li><a href="flashcard">FLASHCARD</a></li>
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn">MORE</button>
+                        <div class="dropdown-content">
+                            <a href="chatbotst">TRANSCRIPTION</a>
+                            <a href="chatbot">ROBOT_FRIEND</a>
+                            <a href="chatbotts">TEXT_AUDIO</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+    </nav>
+    </div>
+
+    <div>
+        <img src="{% static '2050691.jpg' %}" alt="nihongo" id="img2">
+    </div>
+
+    <div>
+        <img src="{% static 'gambare.png' %}" alt="allthebest" id="img3">
+    </div>
+
+
+
+
+    <div>
+        <ul class="in2">
+            <li>
+                <h2 class="selfintro">SELF INTRODUCTION IN JAPANESE</h2>
+                <ul class="introul5">
+                    <li>
+                        <ol type="A">
+                            <li>Nice to meet you! [hajimemashite] [はじめまして。]</li>
+                            <li>My name is _______. [watashino namaewa _____desu] [わたし　の　なまえ　は　____です。]</li>
+                            <li>I am from _______. [_____kara kimashita] [___から　きました。]</li>
+
+                            <li>Thank you for your time / Please keep me in mind. [yoroshiku onegai shimasu] [よろしくおねがいします。]</li>
+                        </ol>
+
+                    </li>
+
+            </li>
+
+            </ul>
+
+        </ul>
+    </div>
+    <div>
+        <ul class="phrases">
+            <li>
+                <h2 class="introphrases">SOME HANDY PHRASES</h2>
+                <ul class="introul6">
+                    <li>
+                        <table id="table1">
+                            <tr>
+                                <th>JAPANESE</th>
+                                <th>ROMAJI</th>
+                                <th>ENGLISH</th>
+                            </tr>
+                            <tr>
+                                <td>はい</td>
+                                <td>Hai </td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td>いいえ</td>
+                                <td>Iie</td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <td>おねがいします</td>
+                                <td>Onegaishimasu</td>
+                                <td>Please </td>
+                            </tr>
+                            <tr>
+                                <td>ありがとう</td>
+                                <td>Arigatou </td>
+                                <td>Thank you </td>
+                            </tr>
+                            <tr>
+                                <td>どういたしまして</td>
+                                <td>Douitashimashite</td>
+                                <td>You're welcome </td>
+                            </tr>
+                            <tr>
+                                <td>すみません</td>
+                                <td>Sumimasen </td>
+                                <td>Excuse me </td>
+                            </tr>
+                            <tr>
+                                <td>ごめんなさい</td>
+                                <td>Gomennasai</td>
+                                <td>I am sorry</td>
+                            </tr>
+                            <tr>
+                                <td>おはようございます</td>
+                                <td>Ohayou gozaimasu</td>
+                                <td>Good morning</td>
+                            </tr>
+                            <tr>
+                                <td>こんばんは</td>
+                                <td> Konbanwa</td>
+                                <td>Good evening</td>
+                            </tr>
+                            <tr>
+                                <td>おやすみなさい</td>
+                                <td>Oyasumi nasai </td>
+                                <td>Good night</td>
+                            </tr>
+                            <tr>
+                                <td>だいじょうぶです</td>
+                                <td>Daijoubu desu</td>
+                                <td>That's all right</td>
+                            </tr>
+                            <tr>
+                                <td>わかります</td>
+                                <td>Wakarimasu</td>
+                                <td> I understand you</td>
+                            </tr>
+                            <tr>
+                                <td>おなまえはなんですか。</td>
+                                <td>Onamae wa nan desu ka.</td>
+                                <td>What is your name?</td>
+                            </tr>
+                            <tr>
+                                <td>おげんきですか。</td>
+                                <td>Ogenki desu ka.</td>
+                                <td>How are you?</td>
+                            </tr>
+                            <tr>
+                                <td> げんきです。</td>
+                                <td>Genki desu.</td>
+                                <td> I am fine.</td>
+                            </tr>
+                            <tr>
+                                <td>わかります</td>
+                                <td>Wakarimasu</td>
+                                <td> I understand you</td>
+                            </tr>
+                            <tr>
+                                <td> もっと　ゆっくりはなして　いただけませんか。</td>
+                                <td>Motto yukkuri hanashite itadakemasen ka.</td>
+                                <td>Can you speak more slowly? </td>
+                            </tr>
+                            <tr>
+                                <td> よくわかります。</td>
+                                <td>Yoku wakarimasu. </td>
+                                <td> I understand you perfectly. </td>
+                            </tr>
+                            <tr>
+                                <td> わたしは　にほんごがすこししかはなせません。</td>
+                                <td>Watashi wa nihongo ga sukoshi shika hanasemasen.</td>
+                                <td> Unfortunately, I speak only a little Japanese.</td>
+                            </tr>
+
+
+                        </table>
+                    </li>
+            </li>
+            </ul>
+        </ul>
+    </div>
+
+
+
+
+
+    <div>
+        <footer>
+            <div class="row2"></div>
+            <div class="footer-container">
+                <h3>FOLLOW US ON</h3>
+                <ul>
+                    <a href="Instagram.html">Instagram</a> &nbsp;&nbsp;
+                    <a href="Facebook.html">Facebook</a> &nbsp;&nbsp;
+                    <a href="YouTube.html">YouTube</a> &nbsp;&nbsp;
+                </ul>
+            </div>
+            <div class="footer-container">
+                <img src="{% static 'favicon.ico' %}" alt="icon" id="fav">
+                <h3>KANTAN NA NIHONGO &nbsp;&copy;&nbsp;All Rights Reserved</h3>
+                <a href="termsndcond">Terms & Conditions</a>
+            </div>
+    </div>
+    </footer>
+    </div>
+
+
+</body>
+
+</html>

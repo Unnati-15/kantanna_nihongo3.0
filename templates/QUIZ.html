@@ -1,0 +1,121 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZ</title>
+
+
+
+    <link rel="stylesheet" href="{% static 'styled.css' %}">
+    <link rel="icon" href="{% static 'favicon.ico' %}">
+
+    <style>
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+            width: 50%;
+            float: center;
+        }
+        
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+        
+        .container {
+            padding: 2px 16px;
+            margin-left: 50px;
+            float: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    {% csrf_token %} {% load static %}
+    <nav>
+        <header>
+            <div class="header-container">
+                <a href="home" id="logo">
+                    <h2 class="k">KANTAN NA NIHONGO</h2>
+                    {% if user.is_authenticated %}
+                    <a class="active" href="logout">
+
+                        <h3 class="k1">{{user.username}}Logout</h3>
+                    </a> {% else %}
+                    <a class="active" href="register">
+                        <h3 class="k1">REGISTER</h3>
+                    </a>
+                    <a class="active" href="login">
+                        <h3 class="k1">LOGIN</h3>
+                    </a>
+                    {% endif %}
+                </a>
+            </div>
+        </header>
+        <div>
+
+
+            <ul id="mainul">
+
+                <li><a href="home">HOME</a></li>
+                <li><a href="phrases">PHRASES</a></li>
+                <li><a href="hiragana">HIRAGANA</a></li>
+                <li><a href="katakana">KATAKANA</a></li>
+                <li><a href="kanji">KANJI</a></li>
+                <li><a href="examdetails">EXAM DETAILS</a></li>
+                <li><a href="resources">RESOURCES</a></li>
+                <li><a href="translation">TRANSLATION</a></li>
+                <li><a href="aboutus">ABOUT US</a></li>
+                <li><a href="quiz">QUIZ</a></li>
+
+            </ul>
+
+    </nav>
+    </div>
+
+
+    <h2 class="examsh1">QUIZ</h2>
+    {% for data in typeData %}
+    <div class="card">
+        <img src="/media/images/{{data.image}}" alt="Avatar" style="width:50%">
+        <div class="container">
+            <h4><b><a href="#">{{data.title}}</a> </b></h4>
+            <p>{{data.detail}}</p>
+        </div>
+    </div>
+    {% endfor %}
+
+
+
+
+
+
+
+
+
+    <div>
+        <footer>
+            <div class="row2"></div>
+            <div class="footer-container">
+                <h3>FOLLOW US ON</h3>
+                <ul>
+                    <a href="Instagram.html">Instagram</a> &nbsp;&nbsp;
+                    <a href="Facebook.html">Facebook</a> &nbsp;&nbsp;
+                    <a href="YouTube.html">YouTube</a> &nbsp;&nbsp;
+                </ul>
+            </div>
+            <div class="footer-container">
+                <img src="{% static 'favicon.ico' %}" alt="icon" id="fav">
+                <h3>KANTAN NA NIHONGO &nbsp;&copy;&nbsp;All Rights Reserved</h3>
+                <a href="termsndcond">Terms & Conditions</a>
+            </div>
+    </div>
+    </footer>
+    </div>
+</body>
+
+</html>

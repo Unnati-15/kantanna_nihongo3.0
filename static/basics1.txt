@@ -1,0 +1,573 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BASICS</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="styling.css">
+    <link rel="icon" href="emblem_library.ico">
+
+</head>
+
+<body>
+
+    <div id="flip">
+        <div class="menu">
+            <button class="menu1"> ☰ </button>
+        </div>
+        <div id="panel">
+            <nav>
+
+
+                <ul id="mainul">
+
+                    <li><a href="ichi.html">HOME</a></li>
+                    <li><a href="BASICS.html">BASICS</a></li>
+                    <li><a href="HIRAGANA.html">HIRAGANA</a></li>
+                    <li><a href="KATAKANA.html">KATAKANA</a></li>
+                    <li><a href="KANJI.html">KANJI</a></li>
+                    <li><a href="EXAMS.html">EXAMS</a></li>
+                    <li><a href="RESOURCES.html">RESOURCES</a></li>
+                    <li><a href="CONTACT.html">CONTACT</a></li>
+                    <li style="float:right"><a class="active" href="LOGIN.html">LOGIN</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+
+    <div>
+
+        <ul type="square" class="introul">
+            <li>
+                <h2 class="introhead">INTRODUCTION</h2>
+                <ul class="introul2">
+                    <li>
+                        Japanese (日本語, Nihongo) is an East Asian language spoken by about 128 million people, primarily in Japan, where it is the national language.It is a member of the Japonic (or Japanese-Ryukyuan) language family, and its ultimate derivation and relation
+                        to other languages is unclear.
+                    </li>
+            </li>
+            </ul>
+        </ul>
+
+        <ul type="square" class="write">
+            <li>
+                <h2 class="introwrite">WRITING</h2>
+                <ul class="introul3">
+                    <li>
+                        Japanese is written mostly using three writing scripts, kanji, hiragana and katakana. Kanji are Chinese characters that were first introduced to Japan in the 4th century.
+                    </li>
+            </li>
+            </ul>
+        </ul>
+
+        <ul type="square" class="in2">
+            <li>
+                <h2 class="selfintro">SELF INTRODUCTION IN JAPANESE</h2>
+                <ul class="introul5">
+                    <li>
+                        <ol type="A">
+                            <li>Nice to meet you! [hajimemashite] [はじめまして]</li>
+                            <li>My name is _______. [watashino namaewa _____desu] [わたし　の　なまえ　は　____です。]</li>
+                            <li>I am from _______. [_____kara kimashita] [___から　きました。]</li>
+
+                            <li>Thank you for your time / Please keep me in mind. [yoroshiku onegai shimasu] [よろしくおねがいします。]</li>
+                        </ol>
+
+                    </li>
+
+            </li>
+
+            </ul>
+
+        </ul>
+
+        <ul type="square" class="phrases">
+            <li>
+                <h2 class="introphrases">SOME HANDY PHRASES</h2>
+                <ul class="introul6">
+                    <li>
+                        <table id="table1">
+                            <tr>
+                                <th>JAPANESE</th>
+                                <th>ROMAJI</th>
+                                <th>ENGLISH</th>
+                            </tr>
+                            <tr>
+                                <td>はい</td>
+                                <td>Hai </td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td>いいえ</td>
+                                <td>Iie</td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <td>おねがいします</td>
+                                <td>Onegaishimasu</td>
+                                <td>Please </td>
+                            </tr>
+                            <tr>
+                                <td>ありがとう</td>
+                                <td>Arigatou </td>
+                                <td>Thank you </td>
+                            </tr>
+                            <tr>
+                                <td>どういたしまして</td>
+                                <td>Douitashimashite</td>
+                                <td>You're welcome </td>
+                            </tr>
+                            <tr>
+                                <td>すみません</td>
+                                <td>Sumimasen </td>
+                                <td>Excuse me </td>
+                            </tr>
+                            <tr>
+                                <td>ごめんなさい</td>
+                                <td>Gomennasai</td>
+                                <td>I am sorry</td>
+                            </tr>
+                            <tr>
+                                <td>おはようございます</td>
+                                <td>Ohayou gozaimasu</td>
+                                <td>Good morning</td>
+                            </tr>
+                            <tr>
+                                <td>こんばんは</td>
+                                <td> Konbanwa</td>
+                                <td>Good evening</td>
+                            </tr>
+                            <tr>
+                                <td>おやすみなさい</td>
+                                <td>Oyasumi nasai </td>
+                                <td>Good night</td>
+                            </tr>
+                            <tr>
+                                <td>だいじょうぶです</td>
+                                <td>Daijoubu desu</td>
+                                <td>That's all right</td>
+                            </tr>
+                            <tr>
+                                <td>わかります</td>
+                                <td>Wakarimasu</td>
+                                <td> I understand you</td>
+                            </tr>
+                            <tr>
+                                <td>おなまえはなんですか。</td>
+                                <td>Onamae wa nan desu ka.</td>
+                                <td>What is your name?</td>
+                            </tr>
+                            <tr>
+                                <td>おげんきですか。</td>
+                                <td>Ogenki desu ka.</td>
+                                <td>How are you?</td>
+                            </tr>
+                            <tr>
+                                <td> げんきです。</td>
+                                <td>Genki desu.</td>
+                                <td> I am fine.</td>
+                            </tr>
+                            <tr>
+                                <td>わかります</td>
+                                <td>Wakarimasu</td>
+                                <td> I understand you</td>
+                            </tr>
+                            <tr>
+                                <td> もっと　ゆっくりはなして　いただけませんか。</td>
+                                <td>Motto yukkuri hanashite itadakemasen ka.</td>
+                                <td>Can you speak more slowly? </td>
+                            </tr>
+                            <tr>
+                                <td> よくわかります。</td>
+                                <td>Yoku wakarimasu. </td>
+                                <td> I understand you perfectly. </td>
+                            </tr>
+                            <tr>
+                                <td> わたしは　にほんごがすこししかはなせません。</td>
+                                <td>Watashi wa nihongo ga sukoshi shika hanasemasen.</td>
+                                <td> Unfortunately, I speak only a little Japanese.</td>
+                            </tr>
+
+
+                        </table>
+                    </li>
+            </li>
+            </ul>
+        </ul>
+
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <footer>
+        <div>
+            <img src="emblem_library.ico" alt="icon">
+            <h3>KANTAN NA NIHONGO &nbsp;&copy;&nbsp;All Rights Reserved.</h3>
+        </div>
+
+    </footer>
+    </div>
+
+</body>
+
+<script>
+    $(document).ready(function() {
+        $("#flip").click(function() {
+            $("#panel").slideToggle("slow");
+        });
+    });
+</script>
+
+</html>
+-->
+
+-------------------------------------hiragana.html-----------------
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIRAGANA</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="styling.css">
+    <link rel="icon" href="emblem_library.ico">
+
+</head>
+
+<body>
+
+    <div id="flip">
+        <div class="menu">
+            <button class="menu1">☰</button>
+        </div>
+        <div id="panel">
+            <nav>
+
+
+                <ul>
+
+                    <li><a href="ichi.html">HOME</a></li>
+                    <li><a href="BASICS.html">BASICS</a></li>
+                    <li><a href="HIRAGANA.html">HIRAGANA</a></li>
+                    <li><a href="KATAKANA.html">KATAKANA</a></li>
+                    <li><a href="KANJI.html">KANJI</a></li>
+                    <li><a href="EXAMS.html">EXAMS</a></li>
+                    <li><a href="RESOURCES.html">RESOURCES</a></li>
+                    <li><a href="CONTACT.html">CONTACT</a></li>
+                    <li style="float:right"><a class="active" href="LOGIN.html">LOGIN</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="exams1">
+        <h2 class="examsh">LET'S LEARN HIRAGANA</h2>
+        <p class="exams1p">
+            Hiragana [ひらがな] is a Japanese syllabary, part of the Japanese writing system, along with katakana as well as kanji. It is a phonetic lettering system. The word hiragana literally means "flowing" or "simple" kana ("simple" originally as contrasted with
+            kanji). Hiragana is used to write okurigana (kana suffixes following a kanji root, for example to inflect verbs and adjectives), various grammatical and function words including particles, as well as miscellaneous other native words for which
+            there are no kanji or whose kanji form is obscure or too formal for the writing purpose.
+        </p>
+    </div>
+    <div class="exams2">
+        <h2 class="examsh1"> LET'S LEARN HIRAGANA</h2>
+        <img src="preview-hiraganachart-dots-green.jpg" alt="hiraganachart" class="imgex2">
+
+    </div>
+    <div class="exams3">
+        <h2 class="examsh2">VIDEO CLIP FOR LEARNING HIRAGANA</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/wD3FJgij79c" frameborder="0" allowfullscreen></iframe>
+
+    </div>
+
+
+    <footer>
+        <div>
+            <img src="emblem_library.ico" alt="icon">
+            <h3>KANTAN NA NIHONGO &nbsp;&copy;&nbsp;All Rights Reserved.</h3>
+        </div>
+        </div>
+    </footer>
+
+</body>
+<script>
+    $(document).ready(function() {
+        $("#flip").click(function() {
+            $("#panel").slideToggle("slow");
+        });
+    });
+</script>
+
+</html>
+
+
+
+------------------------------katakana.html------------------
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KATAKANA</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="styling.css">
+    <link rel="icon" href="emblem_library.ico">
+
+</head>
+
+<body>
+
+    <div id="flip">
+        <div class="menu">
+            <button class="menu1">☰</button>
+        </div>
+        <div id="panel">
+            <nav>
+
+
+                <ul>
+
+                    <li><a href="ichi.html">HOME</a></li>
+                    <li><a href="BASICS.html">BASICS</a></li>
+                    <li><a href="HIRAGANA.html">HIRAGANA</a></li>
+                    <li><a href="KATAKANA.html">KATAKANA</a></li>
+                    <li><a href="KANJI.html">KANJI</a></li>
+                    <li><a href="EXAMS.html">EXAMS</a></li>
+                    <li><a href="RESOURCES.html">RESOURCES</a></li>
+                    <li><a href="CONTACT.html">CONTACT</a></li>
+                    <li style="float:right"><a class="active" href="LOGIN.html">LOGIN</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="kt1">
+        <h2 class="kth">LET'S LEARN KATAKANA</h2>
+        <p class="kthp">
+            Katakana (カタカナ) is a Japanese syllabary, one component of the Japanese writing system along with hiragana, kanji and in some cases the Latin script (known as rōmaji). The word katakana means "fragmentary kana", as the katakana characters are derived from
+            components or fragments of more complex kanji. The katakana syllabary is used for transcription of foreign-language words into Japanese and the writing of loan words for emphasis; to represent onomatopoeia; for technical and scientific terms;
+            and for names of plants, animals, minerals and often Japanese companies.
+        </p>
+    </div>
+    <div class="kt2">
+        <h2 class="kth1"> KATAKANA CHART</h2>
+        <img src="preview-freeprintable-katakanachart-star.jpg" alt="hiraganachart" class="imgex2">
+
+    </div>
+    <div class="kt3">
+        <h2 class="kth2">VIDEO CLIP FOR LEARNING KATAKANA</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/rf-n_qI2occ" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <footer>
+        <div>
+            <img src="emblem_library.ico" alt="icon">
+            <h3>KANTAN NA NIHONGO &nbsp;&copy;&nbsp;All Rights Reserved.</h3>
+        </div>
+        </div>
+    </footer>
+
+</body>
+<script>
+    $(document).ready(function() {
+        $("#flip").click(function() {
+            $("#panel").slideToggle("slow");
+        });
+    });
+</script>
+
+</html>
+
+---------------------------------examdetails-----------------------------
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXAM DETAILS</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="styling.css">
+    <link rel="icon" href="emblem_library.ico">
+
+</head>
+
+<body>
+
+    <div id="flip">
+        <div class="menu">
+            <button class="menu1">☰</button>
+        </div>
+        <div id="panel">
+            <nav>
+
+
+                <ul>
+
+                    <li><a href="ichi.html">HOME</a></li>
+                    <li><a href="BASICS.html">BASICS</a></li>
+                    <li><a href="HIRAGANA.html">HIRAGANA</a></li>
+                    <li><a href="KATAKANA.html">KATAKANA</a></li>
+                    <li><a href="KANJI.html">KANJI</a></li>
+                    <li><a href="EXAMDETAILS.html">EXAM DETAILS</a></li>
+                    <li><a href="RESOURCES.html">RESOURCES</a></li>
+                    <li><a href="CONTACT.html">CONTACT</a></li>
+                    <li style="float:right"><a class="active" href="LOGIN.html">LOGIN</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+
+    <div class="exams1">
+        <h2 class="examsh">WHAT IS JLPT?</h2>
+        <p class="exams1p">
+            The Japanese-Language Proficiency Test (日本語能力試験, Nihongo Nōryoku Shiken), or JLPT, is a standardized criterion-referenced test to evaluate and certify Japanese language proficiency for non-native speakers, covering language knowledge, reading ability,
+            and listening ability.[1] The test is held twice a year in Japan and selected countries (on the first Sunday of July and December), and once a year in other regions (on the first Sunday of December).[2] The JLPT consists of five levels.[3]
+            Until 2009, the test had four levels, with 4 being the lowest and 1 being the highest level of certification.[4] JLPT certificates do not expire nor become invalid over time.
+        </p>
+    </div>
+
+    <div class="exams2">
+        <h2 class="examsh">DETAILS ABOUT LEVELS OF JLPT</h2>
+        <table class="wikitable">
+
+            <tbody>
+                <tr>
+                    <th>Level</th>
+                    <th>A summary of linguistic competence required for each level
+                    </th>
+                </tr>
+                <tr>
+                    <td>N1</td>
+                    <td>
+                        <p><b>Advanced Level</b></p>
+                        <p>ability to understand Japanese used in a variety of circumstances.</p>
+                        <p><b>Reading</b>
+                        </p>
+                        <p>One is able to read writings with logical complexity and/or abstract writings on a variety of topics, such as newspaper editorials and critiques, and comprehend both their structures and contents. One is also able to read written
+                            materials with profound contents on various topics and follow their narratives as well as understand the intent of the writers comprehensively.
+                        </p>
+                        <p><b>Listening</b>
+                        </p>
+                        <p>One is able to comprehend orally presented materials such as coherent conversations, news reports, and lectures, spoken at natural speed in a broad variety of settings, and is able to follow their ideas and comprehend their contents
+                            comprehensively. One is also able to understand the details of the presented materials such as the relationships among the people involved, the logical structures, and the essential points.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>N2</td>
+                    <td>
+                        <p><b>Pre-Advanced Level</b> </p>
+                        <p>The ability to understand Japanese used in everyday situations, and in a variety of circumstances to a certain degree.</p>
+                        <p><b>Reading</b>
+                        </p>
+                        <p>One is able to read materials written clearly on a variety of topics, such as articles and commentaries in newspapers and magazines as well as simple critiques, and comprehend their contents. One is also able to read written materials
+                            on general topics and follow their narratives as well as understand the intent of the writers.
+                        </p>
+                        <p><b>Listening</b>
+                        </p>
+                        <p>One is able to comprehend orally presented materials such as coherent conversations and news reports, spoken at nearly natural speed in everyday situations as well as in a variety of settings, and is able to follow their ideas
+                            and comprehend their contents. One is also able to understand the relationships among the people involved and the essential points of the presented materials.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>N3</td>
+                    <td>
+                        <p><b>Intermediate Level</b></p>
+                        <p>The ability to understand Japanese used in everyday situations to a certain degree.</p>
+                        <p><b>Reading</b>
+                        </p>
+                        <p>One is able to read and understand written materials with specific contents concerning everyday topics. One is also able to grasp summary information such as newspaper headlines. In addition, one is also able to read slightly difficult
+                            writings encountered in everyday situations and understand the main points of the content if some alternative phrases are available to aid one's understanding.
+                        </p>
+                        <p><b>Listening</b>
+                        </p>
+                        <p>One is able to listen and comprehend coherent conversations in everyday situations, spoken at near-natural speed, and is generally able to follow their contents as well as grasp the relationships among the people involved.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>N4</td>
+                    <td>
+                        <p><b>Elementary Level</b> </p>
+                        <p>The ability to understand basic Japanese.</p>
+                        <p><b>Reading</b>
+                        </p>
+                        <p>One is able to read and understand passages on familiar daily topics written in basic vocabulary and kanji.
+                        </p>
+                        <p><b>Listening</b>
+                        </p>
+                        <p>One is able to listen and comprehend conversations encountered in daily life and generally follow their contents, provided that they are spoken slowly.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>N5</td>
+                    <td>
+                        <p><b>Basic Level</b> </p>
+                        <p>The ability to understand some basic Japanese.</p>
+                        <p><b>Reading</b>
+                        </p>
+                        <p>One is able to read and understand typical expressions and sentences written in hiragana, katakana, and basic kanji.
+                        </p>
+                        <p><b>Listening</b>
+                        </p>
+                        <p>One is able to listen and comprehend conversations about topics regularly encountered in daily life and classroom situations, and is able to pick up necessary information from short conversations spoken slowly.
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="exams3">
+        <h2 class="examsh">TEST FORMAT</h2>
+        <img src="JLPT-Levels.png" alt="JLPT-Levels" class="imgex">
+    </div>
+
+    <div class="exams4">
+        <p class="examp2">
+            To look for more information about JLPT
+            <br> Click the link below
+        </p>
+        <a href="https://www.jlpt.jp/" class="linkjlpt">JAPANESE LANGUAGE PROFICIENCY TEST WEBSITE</a>
+    </div>
+
+    <footer>
+        <div>
+            <img src="emblem_library.ico" alt="icon">
+            <h3>KANTAN NA NIHONGO &nbsp;&copy;&nbsp;All Rights Reserved.</h3>
+        </div>
+        </div>
+    </footer>
+
+</body>
+<script>
+    $(document).ready(function() {
+        $("#flip").click(function() {
+            $("#panel").slideToggle("slow");
+        });
+    });
+</script>
+
+</html>

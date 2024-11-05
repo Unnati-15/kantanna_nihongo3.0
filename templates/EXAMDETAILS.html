@@ -1,0 +1,229 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXAM DETAILS</title>
+
+
+    <link rel="stylesheet" href="{% static 'styled.css' %}">
+    <link rel="icon" href="{% static 'favicon.ico' %}">
+
+</head>
+
+<body>
+    {% csrf_token %} {% load static %}
+    <nav>
+        <header>
+            <div class="header-container">
+                <a href="home" id="logo">
+                    <h2 class="k">KANTAN NA NIHONGO</h2>
+                    <a> {% if user.is_authenticated %}
+                        
+                    <a class="active" href="logout">
+                        <h3 class="k1">LOGOUT</h3>
+                    </a>
+
+                    <a class="active" href="result">
+                        <h3 class="k1">RESULT</h3>
+                    </a>
+                    <a class="active" href="#">
+                        <h3 class="k1">WELCOME,{{user.username}}</h3>
+                    </a>
+            </div>
+            </div>
+            </a>
+            {% else %}
+            <a class="active" href="register">
+                <h3 class="k1">REGISTER</h3>
+            </a>
+            <a class="active" href="login">
+                <h3 class="k1">LOGIN</h3>
+            </a>
+            {% endif %}
+            </a>
+            </div>
+        </header>
+        <div>
+
+            <ul id="mainul">
+
+                <li><a href="home">HOME</a></li>
+                <li><a href="phrases">PHRASES</a></li>
+                <li><a href="hiragana">HIRAGANA</a></li>
+                <li><a href="katakana">KATAKANA</a></li>
+                <li><a href="kanji">KANJI</a></li>
+                <li><a href="examdetails">EXAM DETAILS</a></li>
+                <li><a href="resources">RESOURCES</a></li>
+                <li><a href="translation">TRANSLATION</a></li>
+                <li><a href="aboutus">ABOUT US</a></li>
+                <li><a href="flashcard">FLASHCARD</a></li>
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn">MORE</button>
+                        <div class="dropdown-content">
+                            <a href="chatbotst">TRANSCRIPTION</a>
+                            <a href="chatbot">ROBOT_FRIEND</a>
+                            <a href="chatbotts">TEXT_AUDIO</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+    </nav>
+    </div>
+
+    <div>
+        <a href="https://www.jlpt.jp/">
+            <img src="{% static 'jlpt.jfif' %}" alt="jlpt" id="img1"></a>
+    </div>
+
+    <div class="exams1">
+        <h2 class="examsh">WHAT IS JLPT?</h2>
+        <p class="exams1p">
+            The Japanese-Language Proficiency Test (日本語能力試験, Nihongo Nōryoku Shiken), or JLPT, is a standardized criterion-referenced test to evaluate and certify Japanese language proficiency for non-native speakers, covering language knowledge, reading ability,
+            and listening ability. The test is held twice a year in Japan and selected countries (on the first Sunday of July and December), and once a year in other regions (on the first Sunday of December).The JLPT consists of five levels. Until 2009,
+            the test had four levels, with 4 being the lowest and 1 being the highest level of certification. JLPT certificates do not expire nor become invalid over time.
+        </p>
+    </div>
+
+    <div class="exams2">
+        <h2 class="examsh">DETAILS ABOUT LEVELS OF JLPT</h2>
+        <table class="wikitable">
+
+            <tbody>
+                <tr>
+                    <th>Level</th>
+                    <th>A summary of linguistic competence required for each level
+                    </th>
+                </tr>
+                <tr>
+                    <td>N1</td>
+                    <td>
+                        <p><b>Advanced Level</b></p>
+                        <p>ability to understand Japanese used in a variety of circumstances.</p>
+                        <p><b>Reading</b>
+                        </p>
+                        <p>One is able to read writings with logical complexity and/or abstract writings on a variety of topics, such as newspaper editorials and critiques, and comprehend both their structures and contents. One is also able to read written
+                            materials with profound contents on various topics and follow their narratives as well as understand the intent of the writers comprehensively.
+                        </p>
+                        <p><b>Listening</b>
+                        </p>
+                        <p>One is able to comprehend orally presented materials such as coherent conversations, news reports, and lectures, spoken at natural speed in a broad variety of settings, and is able to follow their ideas and comprehend their contents
+                            comprehensively. One is also able to understand the details of the presented materials such as the relationships among the people involved, the logical structures, and the essential points.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>N2</td>
+                    <td>
+                        <p><b>Pre-Advanced Level</b> </p>
+                        <p>The ability to understand Japanese used in everyday situations, and in a variety of circumstances to a certain degree.</p>
+                        <p><b>Reading</b>
+                        </p>
+                        <p>One is able to read materials written clearly on a variety of topics, such as articles and commentaries in newspapers and magazines as well as simple critiques, and comprehend their contents. One is also able to read written materials
+                            on general topics and follow their narratives as well as understand the intent of the writers.
+                        </p>
+                        <p><b>Listening</b>
+                        </p>
+                        <p>One is able to comprehend orally presented materials such as coherent conversations and news reports, spoken at nearly natural speed in everyday situations as well as in a variety of settings, and is able to follow their ideas
+                            and comprehend their contents. One is also able to understand the relationships among the people involved and the essential points of the presented materials.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>N3</td>
+                    <td>
+                        <p><b>Intermediate Level</b></p>
+                        <p>The ability to understand Japanese used in everyday situations to a certain degree.</p>
+                        <p><b>Reading</b>
+                        </p>
+                        <p>One is able to read and understand written materials with specific contents concerning everyday topics. One is also able to grasp summary information such as newspaper headlines. In addition, one is also able to read slightly difficult
+                            writings encountered in everyday situations and understand the main points of the content if some alternative phrases are available to aid one's understanding.
+                        </p>
+                        <p><b>Listening</b>
+                        </p>
+                        <p>One is able to listen and comprehend coherent conversations in everyday situations, spoken at near-natural speed, and is generally able to follow their contents as well as grasp the relationships among the people involved.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>N4</td>
+                    <td>
+                        <p><b>Elementary Level</b> </p>
+                        <p>The ability to understand basic Japanese.</p>
+                        <p><b>Reading</b>
+                        </p>
+                        <p>One is able to read and understand passages on familiar daily topics written in basic vocabulary and kanji.
+                        </p>
+                        <p><b>Listening</b>
+                        </p>
+                        <p>One is able to listen and comprehend conversations encountered in daily life and generally follow their contents, provided that they are spoken slowly.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>N5</td>
+                    <td>
+                        <p><b>Basic Level</b> </p>
+                        <p>The ability to understand some basic Japanese.</p>
+                        <p><b>Reading</b>
+                        </p>
+                        <p>One is able to read and understand typical expressions and sentences written in hiragana, katakana, and basic kanji.
+                        </p>
+                        <p><b>Listening</b>
+                        </p>
+                        <p>One is able to listen and comprehend conversations about topics regularly encountered in daily life and classroom situations, and is able to pick up necessary information from short conversations spoken slowly.
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="exams3">
+        <h2 class="examsh">TEST FORMAT</h2>
+        <img src="{% static 'JLPT-Levels.png' %}" alt="JLPT-Levels" class="imgex">
+    </div>
+
+    <div class="exams4">
+        <p class="examp2">
+            To look for more information about JLPT
+            <br> Click the link below
+        </p>
+        <a href="https://www.jlpt.jp/" class="linkjlpt">JAPANESE LANGUAGE PROFICIENCY TEST WEBSITE</a>
+    </div>
+
+
+    <br><br>
+
+
+
+
+    <div>
+        <footer>
+            <div class="row2"></div>
+            <div class="footer-container">
+                <h3>FOLLOW US ON</h3>
+                <ul>
+                    <a href="Instagram.html">Instagram</a> &nbsp;&nbsp;
+                    <a href="Facebook.html">Facebook</a> &nbsp;&nbsp;
+                    <a href="YouTube.html">YouTube</a> &nbsp;&nbsp;
+                </ul>
+            </div>
+            <div class="footer-container">
+                <img src="{% static 'favicon.ico' %}" alt="icon" id="fav">
+                <h3>KANTAN NA NIHONGO &nbsp;&copy;&nbsp;All Rights Reserved</h3>
+                <a href="termsndcond">Terms & Conditions</a>
+            </div>
+    </div>
+    </footer>
+    </div>
+
+
+</body>
+
+</html>

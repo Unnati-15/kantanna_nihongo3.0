@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZ</title>
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="styled.css">
+    <link rel="icon" href="favicon.ico">
+    <style>
+        #quiz {
+            margin-top: 80px;
+            margin-bottom: 80px;
+            margin-left: 700px;
+        }
+        
+        .question {
+            font-weight: 600;
+        }
+        
+        .answers {
+            margin-bottom: 20px;
+        }
+        
+        #submit {
+            font-family: sans-serif;
+            font-size: 20px;
+            background-color: yellow;
+            color: dodgerblue;
+            border: 0px;
+            border-radius: 3px;
+            padding: 20px;
+            cursor: pointer;
+            margin-bottom: 20px;
+            margin-left: 700px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <header>
+        <div class="header-container">
+            <a href="home.html" id="logo">
+                <h2 class="k">KANTAN NA NIHONGO</h2>
+                <a class="active" href="LOGIN.html">
+                    <h3 class="k1">LOGIN</h3>
+                </a>
+            </a>
+        </div>
+    </header>
+    <div>
+        <nav>
+
+            <ul id="mainul">
+
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="PHRASES.html">PHRASES</a></li>
+                <li><a href="HIRAGANA.html">HIRAGANA</a></li>
+                <li><a href="KATAKANA.html">KATAKANA</a></li>
+                <li><a href="KANJI.html">KANJI</a></li>
+                <li><a href="EXAMDETAILS.html">EXAM DETAILS</a></li>
+                <li><a href="RESOURCES.html">RESOURCES</a></li>
+                <li><a href="CONTACT.html">CONTACT</a></li>
+                <li><a href="ABOUTUS.html">ABOUT US</a></li>
+                <li><a href="QUIZ.html">QUIZ</a></li>
+            </ul>
+
+        </nav>
+    </div>
+
+
+    <div id="quiz"></div>
+    <button id="submit">Get Results</button>
+    <div id="results"></div>
+
+
+
+
+    <div>
+        <footer>
+            <div class="row2"></div>
+            <div class="footer-container">
+                <h3>FOLLOW US ON</h3>
+                <ul>
+                    <a href="Instagram.html">Instagram</a> &nbsp;&nbsp;
+                    <a href="Facebook.html">Facebook</a> &nbsp;&nbsp;
+                    <a href="YouTube.html">YouTube</a> &nbsp;&nbsp;
+                </ul>
+            </div>
+            <div class="footer-container">
+                <img src="favicon.ico" alt="icon" id="fav">
+                <h3>KANTAN NA NIHONGO &nbsp;&copy;&nbsp;All Rights Reserved</h3>
+                <a href="termsndcond">Terms & Conditions</a>
+            </div>
+    </div>
+    </footer>
+    </div>
+
+
+</body>
+<script>
+    var myQuestions = [{
+        question: "Which of the following is ka?",
+        answers: {
+            a: 'あ',
+            b: 'ま',
+            c: 'か',
+            d: 'は'
+
+        },
+        correctAnswer: 'c'
+    }, {
+        question: "Which of the following is ま?",
+        answers: {
+            a: 'マ',
+            b: 'ㇵ',
+            c: 'サ',
+            d: 'は'
+
+        },
+        correctAnswer: 'a'
+    }];
+
+    var quizContainer = document.getElementById('quiz');
+    var resultsContainer = document.getElementById('results');
+    var submitButton = document.getElementById('submit');
+
+    generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
+
+    function generateQuiz(questions, quizContainer, resultsContainer, submitButton) {
+
+        function showQuestions(questions, quizContainer) {
+
+            var output = [];
+            var answers;
+
+
+            for (var i = 0; i < questions.length; i++) {
+
+
+                answers = [];
+
+
+                for (letter in questions[i].answers) {
+
+
+                    answers.push(
+                        '<label>' +
+                        '<input type="radio" name="question' + i + '" value="' + letter + '">' +
+                        letter + ': ' +
+                        questions[i].answers[letter] +
+                        '</label>'
+                    );
+                }
+
+
+                output.push(
+                    '<div class="question">' + questions[i].question + '</div>' +
+                    '<div class="answers">' + answers.join('') + '</div>'
+                );
+            }
+
+
+            quizContainer.innerHTML = output.join('');
+        }
+
+
+        function showResults(questions, quizContainer, resultsContainer) {
+
+
+            var answerContainers = quizContainer.querySelectorAll('.answers');
+
+
+            var userAnswer = '';
+            var numCorrect = 0;
+
+
+            for (var i = 0; i < questions.length; i++) {
+
+
+                userAnswer = (answerContainers[i].querySelector('input[name=question' + i + ']:checked') || {}).value;
+
+
+                if (userAnswer === questions[i].correctAnswer) {
+
+                    numCorrect++;
+
+
+                    answerContainers[i].style.color = 'lightgreen';
+                } else {
+
+                    answerContainers[i].style.color = 'red';
+                }
+            }
+
+
+            resultsContainer.innerHTML = numCorrect + ' out of ' + questions.length;
+        }
+
+
+        showQuestions(questions, quizContainer);
+
+
+        submitButton.onclick = function() {
+            showResults(questions, quizContainer, resultsContainer);
+        }
+
+    }
+</script>
+
+</html>

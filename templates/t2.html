@@ -1,0 +1,208 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRANSCRIPTION</title>
+
+
+    <link rel="stylesheet" href="{% static 'styled.css' %}">
+    <link rel="icon" href="{% static 'favicon.ico' %}">
+    <style>
+        input[type=text],
+        select,
+        textarea {
+            width: 50%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+        
+        .container {
+            border-radius: 5px;
+            padding: 20px;
+            margin-left: 500px;
+        }
+        
+        #chat-form1 {
+            width: 100%;
+            float: center;
+            margin-left: 600px;
+            margin-right: 600px;
+        }
+        
+        .col-25 {
+            float: left;
+            width: 25%;
+            margin-top: 6px;
+        }
+        
+        .col-75 {
+            float: left;
+            width: 75%;
+            margin-top: 6px;
+        }
+        
+        .row::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        button {
+            background-color: #c2f0df;
+            border: none;
+            color: rgb(12, 14, 14);
+            padding: 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-left: 100px;
+            cursor: pointer;
+        }
+        
+        #btn {
+            border-radius: 12px;
+        }
+        
+        @media screen and (max-width: 600px) {
+            .col-25,
+            .col-75,
+            input[type=submit] {
+                width: 50%;
+                margin-top: 0;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+    {% csrf_token %} {% load static %}
+    <nav>
+        <header>
+            <div class="header-container">
+                <a href="home" id="logo">
+                    <h2 class="k">KANTAN NA NIHONGO</h2>
+                    <a> {% if user.is_authenticated %}
+                        
+                    <a class="active" href="logout">
+                        <h3 class="k1">LOGOUT</h3>
+                    </a>
+
+                    <a class="active" href="result">
+                        <h3 class="k1">RESULT</h3>
+                    </a>
+                    <a class="active" href="#">
+                        <h3 class="k1">WELCOME,{{user.username}}</h3>
+                    </a>
+            </div>
+            </div>
+            </a>
+            {% else %}
+            <a class="active" href="register">
+                <h3 class="k1">REGISTER</h3>
+            </a>
+            <a class="active" href="login">
+                <h3 class="k1">LOGIN</h3>
+            </a>
+            {% endif %}
+            </a>
+            </div>
+        </header>
+        <div>
+
+            <ul id="mainul">
+
+                <li><a href="home">HOME</a></li>
+                <li><a href="phrases">PHRASES</a></li>
+                <li><a href="hiragana">HIRAGANA</a></li>
+                <li><a href="katakana">KATAKANA</a></li>
+                <li><a href="kanji">KANJI</a></li>
+                <li><a href="examdetails">EXAM DETAILS</a></li>
+                <li><a href="resources">RESOURCES</a></li>
+                <li><a href="translation">TRANSLATION</a></li>
+                <li><a href="aboutus">ABOUT US</a></li>
+                <li><a href="flashcard">FLASHCARD</a></li>
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn">MORE</button>
+                        <div class="dropdown-content">
+                            <a href="chatbotst">TRANSCRIPTION</a>
+                            <a href="chatbot">ROBOT_FRIEND</a>
+                            <a href="chatbotts">TEXT_AUDIO</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+    </nav>
+    </div>
+    <div class="container"></div>
+
+    <p class="p1">
+        Upload the audio file here and get the transcribed text..<br>
+        <form id="chat-form1" method="post" action="chatbotst" enctype="multipart/form-data">
+            {% csrf_token %} {% load static %}
+            <div class="row">
+                <input type="file" name="myfilest">
+                <button id="btn" type="submit" class="btn btn-primary">Transcribe</button>
+            </div>
+            <div class="row"></div>
+            <div class="col-75">
+                <textarea name="textarea" placeholder="transcription is..." rows="3" cols="7" disabled> {{text}} </textarea>
+            </div>
+            </div>
+        </form>
+        {% if uploaded_file_url %}
+        <p>File uploaded at: <a href="{{ uploaded_file_url }}">{{ uploaded_file_url }}</a></p>
+        {% endif %}
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br> <br>
+        <br>
+        <br> <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div>
+            <footer>
+                <div class="row2"></div>
+                <div class="footer-container">
+                    <h3>FOLLOW US ON</h3>
+                    <ul>
+                        <a href="Instagram.html">Instagram</a> &nbsp;&nbsp;
+                        <a href="Facebook.html">Facebook</a> &nbsp;&nbsp;
+                        <a href="YouTube.html">YouTube</a> &nbsp;&nbsp;
+                    </ul>
+                </div>
+                <div class="footer-container">
+                    <img src="{% static 'favicon.ico' %}" alt="icon" id="fav">
+                    <h3>KANTAN NA NIHONGO &nbsp;&copy;&nbsp;All Rights Reserved</h3>
+                    <a href="termsndcond">Terms & Conditions</a>
+                </div>
+        </div>
+        </footer>
+        </div>
+
+
+
+
+
+
+</body>
+
+</html>

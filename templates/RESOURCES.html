@@ -1,0 +1,211 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESOURCES</title>
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="{% static 'styled.css' %}">
+    <link rel="icon" href="{% static 'favicon.ico' %}">
+</head>
+
+
+<body>
+    {% csrf_token %} {% load static %}
+    <nav>
+        <header>
+            <div class="header-container">
+                <a href="home" id="logo">
+                    <h2 class="k">KANTAN NA NIHONGO</h2>
+                    <a> {% if user.is_authenticated %}
+                        
+                    <a class="active" href="logout">
+                        <h3 class="k1">LOGOUT</h3>
+                    </a>
+
+                    <a class="active" href="result">
+                        <h3 class="k1">RESULT</h3>
+                    </a>
+                    <a class="active" href="#">
+                        <h3 class="k1">WELCOME,{{user.username}}</h3>
+                    </a>
+            </div>
+            </div>
+            </a>
+            {% else %}
+            <a class="active" href="register">
+                <h3 class="k1">REGISTER</h3>
+            </a>
+            <a class="active" href="login">
+                <h3 class="k1">LOGIN</h3>
+            </a>
+            {% endif %}
+            </a>
+            </div>
+        </header>
+        <div>
+
+            <ul id="mainul">
+
+                <li><a href="home">HOME</a></li>
+                <li><a href="phrases">PHRASES</a></li>
+                <li><a href="hiragana">HIRAGANA</a></li>
+                <li><a href="katakana">KATAKANA</a></li>
+                <li><a href="kanji">KANJI</a></li>
+                <li><a href="examdetails">EXAM DETAILS</a></li>
+                <li><a href="resources">RESOURCES</a></li>
+                <li><a href="translation">TRANSLATION</a></li>
+                <li><a href="aboutus">ABOUT US</a></li>
+                <li><a href="flashcard">FLASHCARD</a></li>
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn">MORE</button>
+                        <div class="dropdown-content">
+                            <a href="chatbotst">TRANSCRIPTION</a>
+                            <a href="chatbot">ROBOT_FRIEND</a>
+                            <a href="chatbotts">TEXT_AUDIO</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+    </nav>
+    </div>
+
+
+    <img src="{% static 'header-1280x.jpg' %}" alt="RESOURCES" class="imgkanji">
+
+    <h2 class="examsh1"><img src="{% static 'usanin-favicon.png' %}" width="100px" height="100px"> BLOGS </h2>
+
+
+    <div class="row3">
+        <div class="column3">
+            <a href="https://japanswitch.com/guide-to-japanese-tips/">
+                <img src="{% static 'JapanSwitch.webp' %}" alt="japanswitch" class="imga"></a>
+            <h2>
+                <a href="https://japanswitch.com/guide-to-japanese-tips/">Guide to Japanese Study Tips</h2></a>
+                <p>This article serves as a guide on Japanese study tips for both formal and fun study methods. This article is a part of extensive series of guides on Studying Japanese.</p>
+        </div>
+
+        <div class="column3">
+            <a href="https://japanswitch.com/guide-to-japanese-culture-shock/">
+                <img src="{% static 'JapanSwitch.webp' %}" alt="japanswitch" class="imga"></a>
+            <h2><a href="https://japanswitch.com/guide-to-japanese-culture-shock/">Guide to Japanese Culture Shock</h2></a>
+                <p>Japan is a perfect example of how old traditions live in harmony with the modern world. It can be difficult to navigate as a foreigner so we have compiled an article with an abundant amount of information to help you handle the transition!</p>
+        </div>
+
+        <div class="column3">
+            <a href="https://japanswitch.com/guide-to-japanese-friends/">
+                <img src="{% static 'JapanSwitch.webp' %}" alt="japanswitch" class="imga"></a>
+            <h2><a href="https://japanswitch.com/guide-to-japanese-friends/">Top 15 Tips to Make Japanese Friends</h2></a>
+                <p>When it comes to making Japanese friends there are numerous possible approaches. This article has narrowed the possibilities down to the TOP 15 tips, you’ll be making Japanese friends in no time! </p>
+        </div>
+    </div>
+
+    <h2 class="examsh1"> <img src="{% static 'usanin-favicon.png' %}" width="100px" height="100px"> PODCASTS </h2>
+
+    <div class="row3">
+        <div class="column3">
+            <a href="https://www.tofugu.com/podcast/">
+                <img src="{% static 'tofugu-japanese-podcast-300x188.webp' %}" alt="tofugu" class="imga"></a>
+            <h2> <a href="https://www.tofugu.com/podcast/">The Tofugu Podcast</h2></a>
+
+        </div>
+
+        <div class="column3">
+            <a href="https://www.japanesepod101.com/">
+                <img src="{% static 'japanesepod101.webp' %}" alt="japanesepod101" class="imga"></a>
+            <h2><a href="https://www.japanesepod101.com/">JapanesePod101</h2></a>
+
+        </div>
+
+        <div class="column3">
+            <a href="https://learnjapanesepod.com/">
+                <img src="{% static 'learn-japanese-pod-400x400.webp' %}" alt="kanji-a" class="imga"></a>
+            <h2> <a href="https://learnjapanesepod.com/"> Learn Japanese Pod</h2></a>
+
+        </div>
+    </div>
+
+    <h2 class="examsh1"> <img src="{% static 'usanin-favicon.png' %}" width="100px" height="100px"> WEBSITES </h2>
+
+    <div class="row3">
+        <div class="column3">
+            <a href="https://tadoku.org/japanese/free-books/">
+                <img src="{% static 'eyecatch.png' %}" alt="tadoku" class="imga"></a>
+            <h2> <a href="https://tadoku.org/japanese/free-books/">Tadoku Books</h2></a>
+
+        </div>
+
+        <div class="column3">
+            <a href="https://www3.nhk.or.jp/nhkworld/en/learnjapanese/">
+                <img src="{% static 'download (1).png' %}" alt="nhkworld" class="imga"></a>
+            <h2><a href="https://www3.nhk.or.jp/nhkworld/en/learnjapanese/">NHKWorld Learn Japanese</h2></a>
+
+        </div>
+
+        <div class="column3">
+            <a href="https://matcha-jp.com/easy/">
+                <img src="{% static '30-67134.png' %}" alt="matcha-jp" class="imga"></a>
+            <h2> <a href="https://matcha-jp.com/easy/">Matcha</h2></a>
+
+        </div>
+    </div>
+
+    <h2 class="examsh1"> <img src="{% static 'usanin-favicon.png' %}" width="100px" height="100px"> VIDEOS </h2>
+
+    <div class="row3">
+        <div class="column3">
+            <iframe width="316" height="115" class="r1" src="https://www.youtube.com/embed/ZmoBCus_IhQ" frameborder="0" allowfullscreen></iframe>
+            <h2>Onomappu</h2>
+        </div>
+
+        <div class="column3">
+            <iframe width="316" height="115" class="r2" src="https://www.youtube.com/embed/J78j99MMq8k" frameborder="0" allowfullscreen></iframe>
+            <h2>
+                Japanese Ammo with Misa </h2>
+        </div>
+
+        <div class="column3">
+            <iframe width="316" height="115" class="r3" src="https://www.youtube.com/embed/9903wxInbYw" frameborder="0" allowfullscreen></iframe>
+            <h2>
+                三本塾 -Sambon Juku- </h2>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <div>
+        <footer>
+            <div class="row2"></div>
+            <div class="footer-container">
+                <h3>FOLLOW US ON</h3>
+                <ul>
+                    <a href="Instagram.html">Instagram</a> &nbsp;&nbsp;
+                    <a href="Facebook.html">Facebook</a> &nbsp;&nbsp;
+                    <a href="YouTube.html">YouTube</a> &nbsp;&nbsp;
+                </ul>
+            </div>
+            <div class="footer-container">
+                <img src="{% static 'favicon.ico' %}" alt="icon" id="fav">
+                <h3>KANTAN NA NIHONGO &nbsp;&copy;&nbsp;All Rights Reserved</h3>
+                <a href="termsndcond">Terms & Conditions</a>
+            </div>
+    </div>
+    </footer>
+    </div>
+
+
+</body>
+
+</html>

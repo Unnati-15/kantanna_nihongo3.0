@@ -1,0 +1,190 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KANJI</title>
+
+
+
+    <link rel="stylesheet" href="{% static 'styled.css' %}">
+    <link rel="icon" href="{% static 'favicon.ico' %}">
+
+</head>
+
+<body>
+    {% csrf_token %} {% load static %}
+    <nav>
+        <header>
+            <div class="header-container">
+                <a href="home" id="logo">
+                    <h2 class="k">KANTAN NA NIHONGO</h2>
+                    <a> {% if user.is_authenticated %}
+                        
+                    <a class="active" href="logout">
+                        <h3 class="k1">LOGOUT</h3>
+                    </a>
+
+                    <a class="active" href="result">
+                        <h3 class="k1">RESULT</h3>
+                    </a>
+                    <a class="active" href="#">
+                        <h3 class="k1">WELCOME,{{user.username}}</h3>
+                    </a>
+            </div>
+            </div>
+            </a>
+            {% else %}
+            <a class="active" href="register">
+                <h3 class="k1">REGISTER</h3>
+            </a>
+            <a class="active" href="login">
+                <h3 class="k1">LOGIN</h3>
+            </a>
+            {% endif %}
+            </a>
+            </div>
+        </header>
+        <div>
+
+            <ul id="mainul">
+
+                <li><a href="home">HOME</a></li>
+                <li><a href="phrases">PHRASES</a></li>
+                <li><a href="hiragana">HIRAGANA</a></li>
+                <li><a href="katakana">KATAKANA</a></li>
+                <li><a href="kanji">KANJI</a></li>
+                <li><a href="examdetails">EXAM DETAILS</a></li>
+                <li><a href="resources">RESOURCES</a></li>
+                <li><a href="translation">TRANSLATION</a></li>
+                <li><a href="aboutus">ABOUT US</a></li>
+                <li><a href="flashcard">FLASHCARD</a></li>
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn">MORE</button>
+                        <div class="dropdown-content">
+                            <a href="chatbotst">TRANSCRIPTION</a>
+                            <a href="chatbot">ROBOT_FRIEND</a>
+                            <a href="chatbotts">TEXT_AUDIO</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+    </nav>
+    </div>
+
+    <div class="exams2">
+        <h2 class="examsh1"> LET'S MAKE KANJI LEARNING EASY</h2>
+        <img src="{% static 'kanjiimg.webp' %}" alt="kanjichart" class="imgkanji">
+
+    </div>
+    <div>
+        <p class="exams1p">
+            To get the basic idea of kanjis,please go through the recommended video below : &#8595;
+        </p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/AtwD31VPI1c" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <div class="row1">
+        <div class="column side">
+            <a href="https://www.kanshudo.com/how-to-master-the-kanji"><img src="{% static 'Kanshudo.jpg' %}" alt="kanshudo" class="imga"></a>
+        </div>
+
+        <div class="column middle">
+            <a href="https://www.kanshudo.com/how-to-master-the-kanji">
+                <h2>KANSHUDO</h2>
+            </a>
+            <p>This is a site where you can learn Japanese comprehensively with tremendous content and manage your learning progress with Kanshudo AI.</p>
+
+        </div>
+
+    </div>
+    <div class="row1">
+        <div class="column side">
+            <a href="https://jisho.org/"><img src="{% static 'jisho.png' %}" alt="jisho" class="imga"></a>
+        </div>
+
+        <div class="column middle">
+            <a href="https://jisho.org/">
+                <h2>JISHO</h2>
+            </a>
+            <p>Jisho is a powerful Japanese-English dictionary. It lets you find words, kanji, example sentences and more quickly and easily.</p>
+
+        </div>
+
+    </div>
+    <div class="row1">
+        <div class="column side">
+            <a href="https://a1.marugotoweb.jp/en/kanji.php"><img src="{% static 'img_beginner_active01.gif' %}" alt="Marugoto" class="imga"></a>
+        </div>
+
+        <div class="column middle">
+            <a href="https://a1.marugotoweb.jp/en/kanji.php">
+                <h2>MARUGOTO PLUS</h2>
+            </a>
+            <p>MARUGOTO Plus is a website where users can learn about Japanese language and culture alongside the contents of "Marugoto: Japanese Language and Culture".</p>
+
+        </div>
+
+    </div>
+    <div class="row1">
+        <div class="column side">
+            <a href="https://jitenon.com/"><img src="{% static 'dictionary.png' %}" alt="dictionary" class="imga"></a>
+        </div>
+
+        <div class="column middle">
+            <a href="https://jitenon.com/">
+                <h2>KANJI DICTIONARY</h2>
+            </a>
+            <p>A kanji dictionary to look up kanji and words. It has lots of characters and a wealth of information.</p>
+
+        </div>
+
+    </div>
+    <div class="row1">
+        <div class="column side">
+            <a href="https://www.tofugu.com/japanese/kanji-radicals-mnemonic-method/"><img src="{% static 'download.png' %}" alt="tofugu" class="imga"></a>
+        </div>
+
+        <div class="column middle">
+            <a href="https://www.tofugu.com/japanese/kanji-radicals-mnemonic-method/">
+                <h2>TOFUGU</h2>
+            </a>
+            <p>This is where you can learn different radicals used in writing kanjis.</p>
+
+        </div>
+
+    </div>
+    <br>
+    <br>
+
+
+
+    <div>
+        <footer>
+            <div class="row2"></div>
+            <div class="footer-container">
+                <h3>FOLLOW US ON</h3>
+                <ul>
+                    <a href="Instagram.html">Instagram</a> &nbsp;&nbsp;
+                    <a href="Facebook.html">Facebook</a> &nbsp;&nbsp;
+                    <a href="YouTube.html">YouTube</a> &nbsp;&nbsp;
+                </ul>
+            </div>
+            <div class="footer-container">
+                <img src="{% static 'favicon.ico' %}" alt="icon" id="fav">
+                <h3>KANTAN NA NIHONGO &nbsp;&copy;&nbsp;All Rights Reserved</h3>
+                <a href="termsndcond">Terms & Conditions</a>
+            </div>
+    </div>
+    </footer>
+    </div>
+
+
+</body>
+
+</html>
